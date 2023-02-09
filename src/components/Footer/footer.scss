@@ -4,7 +4,8 @@
     @include flex(column, center,center);
     background-color: black;
     &__img{
-        fill:white;
+        width: 122px;
+        height: 39px;
     }
     &__text{
         color:white;
