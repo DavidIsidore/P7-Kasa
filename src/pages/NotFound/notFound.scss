@@ -3,6 +3,10 @@
 .notFound{
     color: $color-secondary;
     &__error{
-        @include flex;
+        @include flex(column, center, center);
+        &__title{
+            font-weight: 700;
+            font-size: 288px;
+        }
     }
 }

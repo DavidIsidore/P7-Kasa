@@ -8,8 +8,8 @@ export default function NotFound() {
         <div className="notFound">
             <Header />
             <div className="notFound__error">
-                <h1>404</h1>
-                <p>Oups! La page que vous demandez n'existe pas.</p>
+                <h1 className="notFound__error__title">404</h1>
+                <p className="notFound__error__text">Oups! La page que vous demandez n'existe pas.</p>
             </div>
             <Footer />
         </div>
