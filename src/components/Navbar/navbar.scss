@@ -1,0 +1,7 @@
+@import '../../sass/main.scss';
+
+.nav__list{
+    display: flex;
+    color: $color-secondary;
+    gap:20px;
+}
