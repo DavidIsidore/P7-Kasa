@@ -7,11 +7,11 @@ export default function Galley() {
             <ul style={{display:"flex",flexWrap:'wrap',gap:60}}>
                 {datas.map(data => {
                     return(
-                        <li >
+                        <li style={{width:340, height:340}}>
                             
                             
                             <img style={{width:340, height:340}} src={data.cover} alt="Photo miniature" />
-                            <p>{data.title}</p>
+                            <p style={{position:'relative', bottom:80,fontSize:18, color: 'white'}}>{data.title}</p>
                         </li>
                     )
                 })}
