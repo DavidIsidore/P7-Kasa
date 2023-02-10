@@ -3,6 +3,7 @@
 .footer{
     @include flex(column, center,center);
     background-color: black;
+    height: 209px;
     &__img{
         width: 122px;
         height: 39px;

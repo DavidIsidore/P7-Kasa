@@ -27,16 +27,16 @@ export default function Accomodation() {
     return(
         <div>
             <Header />
-            <div>
+            <div style={{display:'flex', flexDirection:'row', justifyContent:'space-between'}}>
                 <div>
                     <h1>{appartement[0].title} </h1>
                     <h2>{appartement[0].location}</h2>
                     <p>{appartement[0].tags}</p>
                 </div>
                 <div>
-                    <div>
+                    <div style={{display:'flex', flexDirection:'row', justifyContent:'space-between'}}>
                         <h2>{appartement[0].host.name}</h2>
-                        <img src={appartement[0].host.picture} alt="Visage de l'hôte"/>
+                        <img style={{width:64, height:64, borderRadius:50}} src={appartement[0].host.picture} alt="Visage de l'hôte"/>
                     </div>
                     
                 </div>
