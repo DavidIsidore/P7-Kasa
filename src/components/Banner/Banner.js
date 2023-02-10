@@ -11,7 +11,9 @@ export default function Banner() {
     return(
         location.pathname === "/about" ? (
             <img src={aboutBanner} alt="Bannière de la page à propos" />
-        ):(
-        <img src={banner} alt="bannière de la page d'accueil" />)
+        ):(<div>
+        <img src={banner} alt="bannière de la page d'accueil" />
+        <p style={{position:'relative',top:-150, textAlign:'center', color:'white', fontSize:48}}>Chez vous, partout et ailleurs</p>
+        </div>)
     )
 }
