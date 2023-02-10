@@ -1,5 +1,6 @@
 import React from "react";
 import datas from '../../data/data'
+import Card from "../Card/Card";
 
 export default function Galley() {
     return(
@@ -7,12 +8,11 @@ export default function Galley() {
             <ul style={{display:"flex",flexWrap:'wrap',gap:60}}>
                 {datas.map(data => {
                     return(
-                        <li style={{ width:340, height:340}}>
-                            
-                            
-                            <img style={{width:340, height:340}} src={data.cover} alt="Miniature de l'appartement" />
-                            <h2 style={{position:'relative', bottom:80,fontSize:18, color: 'white', paddingLeft:20}}>{data.title}</h2>
-                        </li>
+                        <Card 
+                            id={data.id}
+                            cover={data.cover}
+                            title={data.title}
+                        />
                     )
                 })}
             </ul>
