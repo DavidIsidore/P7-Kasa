@@ -7,11 +7,12 @@ export default function Galley() {
             <ul>
                 {datas.map(data => {
                     return(
-                        <div >
+                        <li >
                             {data.id}
-                            {data.title}
+                            
                             <img style={{width:340, height:340}} src={data.cover} alt="Photo miniature" />
-                        </div>
+                            {data.title}
+                        </li>
                     )
                 })}
             </ul>
