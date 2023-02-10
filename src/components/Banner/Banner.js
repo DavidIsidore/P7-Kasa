@@ -14,7 +14,7 @@ export default function Banner() {
             <img src={aboutBanner} alt="Bannière de la page à propos" className="banner"/>
         ):(<div>
         <img src={banner} alt="bannière de la page d'accueil" className="banner"/>
-        <p style={{position:'relative',top:-150, textAlign:'center', color:'white', fontSize:48}}>Chez vous, partout et ailleurs</p>
+        <p style={{position:'relative',top:-200, textAlign:'center', color:'white', fontSize:48}}>Chez vous, partout et ailleurs</p>
         </div>)
     )
 }
