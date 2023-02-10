@@ -7,8 +7,8 @@ import './banner.scss'
 
 export default function Banner() {
     const location = useLocation()
-    console.log(location)
-    console.log(location.pathname)
+    //console.log(location)
+    //console.log(location.pathname)
     return(
         location.pathname === "/about" ? (
             <img src={aboutBanner} alt="Bannière de la page à propos" className="banner"/>
