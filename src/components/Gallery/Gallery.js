@@ -4,7 +4,7 @@ import datas from '../../data/data'
 export default function Galley() {
     return(
         <div>
-            <ul>
+            <ul style={{display:"flex",flexWrap:'wrap'}}>
                 {datas.map(data => {
                     return(
                         <li >
