@@ -2,6 +2,7 @@ import React from "react";
 import banner from '../../assets/home_banner.svg'
 import aboutBanner from '../../assets/about_banner.svg'
 import { useLocation } from "react-router-dom";
+import './banner.scss'
 
 
 export default function Banner() {
@@ -10,9 +11,9 @@ export default function Banner() {
     console.log(location.pathname)
     return(
         location.pathname === "/about" ? (
-            <img src={aboutBanner} alt="Bannière de la page à propos" />
+            <img src={aboutBanner} alt="Bannière de la page à propos" className="banner"/>
         ):(<div>
-        <img src={banner} alt="bannière de la page d'accueil" />
+        <img src={banner} alt="bannière de la page d'accueil" className="banner"/>
         <p style={{position:'relative',top:-150, textAlign:'center', color:'white', fontSize:48}}>Chez vous, partout et ailleurs</p>
         </div>)
     )

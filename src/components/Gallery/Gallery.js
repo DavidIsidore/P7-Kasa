@@ -10,7 +10,7 @@ export default function Galley() {
                         <li style={{width:340, height:340}}>
                             
                             
-                            <img style={{width:340, height:340}} src={data.cover} alt="Photo miniature" />
+                            <img style={{width:340, height:340}} src={data.cover} alt="Miniature de l'appartement" />
                             <p style={{position:'relative', bottom:80,fontSize:18, color: 'white'}}>{data.title}</p>
                         </li>
                     )
