@@ -8,7 +8,8 @@ export default function Galley() {
             <ul style={{display:"flex",flexWrap:'wrap',gap:60}}>
                 {datas.map(data => {
                     return(
-                        <Card 
+                        <Card
+                            key={data.id} 
                             id={data.id}
                             cover={data.cover}
                             title={data.title}
