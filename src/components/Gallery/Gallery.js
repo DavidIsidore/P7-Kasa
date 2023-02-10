@@ -4,14 +4,14 @@ import datas from '../../data/data'
 export default function Galley() {
     return(
         <div>
-            <ul style={{display:"flex",flexWrap:'wrap'}}>
+            <ul style={{display:"flex",flexWrap:'wrap',gap:20}}>
                 {datas.map(data => {
                     return(
                         <li >
-                            {data.id}
+                            
                             
                             <img style={{width:340, height:340}} src={data.cover} alt="Photo miniature" />
-                            {data.title}
+                            <p>{data.title}</p>
                         </li>
                     )
                 })}
