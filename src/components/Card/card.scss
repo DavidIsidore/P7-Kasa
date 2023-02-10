@@ -1,0 +1,13 @@
+@import '../../sass/main.scss';
+
+.singleCard{
+    width: 30%;
+    height: 340px;
+    border-radius: 10px;
+}
+
+img{
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+}
