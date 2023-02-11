@@ -1,6 +1,7 @@
 import ArrowRight from '../../assets/arrow_forward.svg'
 import ArrowLeft from '../../assets/arrow_back.svg'
 import { useState } from 'react'
+import './slider.scss'
 
 export default function Slider({appart}) {
 
@@ -19,7 +20,7 @@ export default function Slider({appart}) {
     }
 
     return (
-        <section style={{backgroundImage : `url(${appart[currentIndex]})`, width:1240, height: 415, borderRadius:25}}  className='carousel'>
+        <section style={{backgroundImage : `url(${appart[currentIndex]})`}}  className='carousel'>
             {appart.length > 1 && 
                 <>
                     <img 
@@ -27,7 +28,7 @@ export default function Slider({appart}) {
                         src={ArrowRight} 
                         alt="show next slider" 
                         onClick={nextSlide}
-                        style={{width:96, height:120}}
+                        
                     />
                     <img 
                         className='carousel_arrow carousel_arrow_left' 
