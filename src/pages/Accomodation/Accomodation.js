@@ -13,6 +13,10 @@ export default function Accomodation() {
     //console.log(location)
     const params= useParams('id').id
 
+    useEffect(() => {
+        document.title = `${appartement[0].title}`
+    })
+
     
     //console.log(params)
 

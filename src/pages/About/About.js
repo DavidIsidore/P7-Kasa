@@ -40,7 +40,7 @@ export default function About() {
             </div>
             )}
             
-            <div>
+            <div style={{gap:20}}>
                  <div style={{display:'flex', flexDirection:'row', backgroundColor:'#FF6060', justifyContent:'space-between', paddingLeft:20, paddingRight:20, alignItems:'center', borderRadius:5}}>
                     <h2>Respect</h2>
                     <img src={arrow_up} alt="flèche en bas" style={{width:14, height:23}} />

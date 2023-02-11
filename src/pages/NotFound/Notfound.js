@@ -2,8 +2,14 @@ import React from "react";
 import Header from "../../components/Header/Header";
 import './notFound.scss'
 import { Link } from "react-router-dom";
+import { useEffect } from "react";
 
 export default function NotFound() {
+
+    useEffect(() => {
+        document.title = 'Oups...'
+    })
+
     return(
         <div className="notFound">
             <Header />

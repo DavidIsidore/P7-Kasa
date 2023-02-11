@@ -6,9 +6,10 @@ import Gallery from "../../components/Gallery/Gallery";
 import { useEffect } from "react";
 
 export default function Home() {
+    
 
     useEffect(() => {
-        document.title = 'Acceuil'
+        document.title = 'Accueil'
     })
     return(
         <div>
