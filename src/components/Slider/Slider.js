@@ -19,7 +19,7 @@ export default function Slider({appart}) {
     }
 
     return (
-        <section style={{backgroundImage : `url(${appart[currentIndex]})`}} className='carousel'>
+        <section style={{backgroundImage : `url(${appart[currentIndex]})`, width:1240, height: 415, borderRadius:25}}  className='carousel'>
             {appart.length > 1 && 
                 <>
                     <img 
@@ -27,12 +27,14 @@ export default function Slider({appart}) {
                         src={ArrowRight} 
                         alt="show next slider" 
                         onClick={nextSlide}
+                        style={{width:96, height:120}}
                     />
                     <img 
                         className='carousel_arrow carousel_arrow_left' 
                         src={ArrowLeft} 
                         alt="show previous slider" 
                         onClick={prevSlide}
+                        style={{width:96, height:120}}
                     />
                     <p className='slideCount'>{currentIndex + 1} / {appart.length}</p>
                 </>
