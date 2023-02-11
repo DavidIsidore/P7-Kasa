@@ -4,19 +4,42 @@ import Footer from "../../components/Footer/Footer";
 import Banner from "../../components/Banner/Banner";
 import arrow_down from '../../assets/arrow_down.svg';
 import arrow_up from '../../assets/arrow_up.svg'
+import { useState, useEffect } from "react";
 
 export default function About() {
+
+    useEffect(() => {
+        document.title = 'À propos'
+    })
+
+    const [isOpen, setIsOpen] = useState(false)
+
+    /*useEffect((setIsOpen) => {
+        return () => setIsOpen(false)
+    })*/
+
     return(
         <div>
             <Header />
             <Banner />
-            <div>
+            {isOpen? (
+                <div style={{gap:20}}>
                 <div style={{display:'flex', flexDirection:'row', backgroundColor:'#FF6060', justifyContent:'space-between', paddingLeft:20, paddingRight:20, alignItems:'center', borderRadius:5}}>
                     <h2>Fiabilité</h2>
-                    <img src={arrow_up} alt="flèche en bas" style={{width:14, height:23}} />
+                    <img src={arrow_up} alt="flèche en bas" style={{width:14, height:23, cursor:'pointer'}} onClick={() => setIsOpen(false)}/>
                 </div>
                 <p>Les annonces postées sur Kasa garantissent une fiabilité totale. Les photos sont conformes aux logements, et toutes les informations sont régulièrement vérifiées  par nos équipes. </p>
             </div>
+            ):(
+                <div>
+                <div style={{display:'flex', flexDirection:'row', backgroundColor:'#FF6060', justifyContent:'space-between', paddingLeft:20, paddingRight:20, alignItems:'center', borderRadius:5}}>
+                    <h2>Fiabilité</h2>
+                    <img src={arrow_down} alt="flèche en bas" style={{width:14, height:23}} onClick={() => setIsOpen(true)}/>
+                </div>
+                
+            </div>
+            )}
+            
             <div>
                  <div style={{display:'flex', flexDirection:'row', backgroundColor:'#FF6060', justifyContent:'space-between', paddingLeft:20, paddingRight:20, alignItems:'center', borderRadius:5}}>
                     <h2>Respect</h2>
