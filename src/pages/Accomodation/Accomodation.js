@@ -6,22 +6,25 @@ import { useState, useEffect } from "react";
 //import { useLocation } from "react-router-dom";
 import datas from "../../data/data";
 //import Card from "../../components/Card/Card";
+import Slider from "../../components/Slider/Slider";
 
 export default function Accomodation() {
     //const location=useLocation()
     //console.log(location)
     const params= useParams('id').id
-    console.log(params)
+
+    
+    //console.log(params)
 
     const [appart, showAppart] = useState([])
     const appartement = datas.filter(data => data.id===params)
 
     useEffect(() => {
         const appartement = datas.filter(data => data.id===params)
-       showAppart(appartement[0].host.name)
+       showAppart(appartement[0].pictures)
     }, [params])
 
-    console.log(appart)
+    //console.log(appart)
     
     
     return(
@@ -29,6 +32,7 @@ export default function Accomodation() {
             <Header />
             <div style={{display:'flex', flexDirection:'row', justifyContent:'space-between'}}>
                 <div>
+                    <Slider appart={appart}/>
                     <h1>{appartement[0].title} </h1>
                     <h2>{appartement[0].location}</h2>
                     <p>{appartement[0].tags}</p>
