@@ -5,20 +5,23 @@ import Banner from "../../components/Banner/Banner";
 import arrow_down from '../../assets/arrow_down.svg';
 import arrow_up from '../../assets/arrow_up.svg'
 import { useState, useEffect } from "react";
+import aboutDatas from "../../data/aboutDatas";
 
+import Collapse from "../../components/Collapse/Collapse";
 export default function About() {
 
     useEffect(() => {
         document.title = 'À propos'
     })
 
-    const [isOpen, setIsOpen] = useState(false)
+    //const [isOpen, setIsOpen] = useState(false)
+    console.log(aboutDatas)
 
     /*useEffect((setIsOpen) => {
         return () => setIsOpen(false)
     })*/
 
-    return(
+    /*return(
         <div>
             <Header />
             <Banner />
@@ -39,6 +42,7 @@ export default function About() {
                 
             </div>
             )}
+            
             
             <div style={{gap:20}}>
                  <div style={{display:'flex', flexDirection:'row', backgroundColor:'#FF6060', justifyContent:'space-between', paddingLeft:20, paddingRight:20, alignItems:'center', borderRadius:5}}>
@@ -63,5 +67,24 @@ export default function About() {
             </div>
             <Footer />
         </div>
+    )*/
+    return(
+        <div>
+        <Header />
+        <Banner />
+        <div>
+            {   aboutDatas.map(data => {
+                return(
+                    <div key={data.id}><Collapse title={data.title} content={data.content}/></div>
+                        )
+                })}
+                    </div>
+        <Footer />
+        </div>
+        
     )
+    
+ 
+
+    
 }
