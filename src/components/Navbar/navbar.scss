@@ -4,4 +4,10 @@
     display: flex;
     color: $color-secondary;
     gap:20px;
+    &_item{
+        
+        &_active{
+            text-decoration: underline solid $color-secondary;
+        }
+    }
 }

@@ -3,6 +3,8 @@
 
 .header{
     @include flex(row, space-between, center);
-    width: 95%;
+    width: 1440px;
     margin: auto;
+    position: absolute;
+    top:40px;
 }

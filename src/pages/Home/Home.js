@@ -4,6 +4,8 @@ import Footer from "../../components/Footer/Footer";
 import Banner from "../../components/Banner/Banner";
 import Gallery from "../../components/Gallery/Gallery";
 import { useEffect } from "react";
+import './home.scss'
+
 
 export default function Home() {
     
@@ -14,10 +16,10 @@ export default function Home() {
     return(
         <div>
             <Header />
-            <div>
+            
                 <Banner />
                 <Gallery />
-            </div>
+            
             <Footer />
         </div>
     )

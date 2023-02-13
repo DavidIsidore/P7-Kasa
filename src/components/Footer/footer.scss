@@ -4,6 +4,9 @@
     @include flex(column, center,center);
     background-color: black;
     height: 209px;
+    width: 1440px;
+    position: absolute;
+    top:3433px;
     &__img{
         width: 122px;
         height: 39px;
