@@ -7,16 +7,23 @@
         &__title{
             font-weight: 700;
             font-size: 288px;
+            position: relative;
+            top: 277px;
+            margin-top: 0;
         }
         &__text{
             font-weight: 500;
             font-size: 36px;
+            position: relative;
+            top: 66px;
         }
         &__back{
             display: block;
             text-align: center;
             font-weight: 500;
             font-size: 18px;
+            position: relative;
+            top: 299px;
         }
     }
 }

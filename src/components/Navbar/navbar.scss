@@ -8,6 +8,13 @@
         
         &_active{
             text-decoration: underline solid $color-secondary;
+            
         }
+        &_active:hover{
+            transform: scale(1.1);
+        }
+    }
+    &_item:hover{
+        transform: scale(1.1);
     }
 }
