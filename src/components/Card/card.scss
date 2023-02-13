@@ -1,9 +1,12 @@
 @import '../../sass/main.scss';
 
 .singleCard{
-    width: 30%;
+    width: 340px;
     height: 340px;
     border-radius: 10px;
+    @media screen and (max-width:768px){
+       min-width: 335px;
+    }
 }
 
 img{

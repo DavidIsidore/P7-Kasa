@@ -14,12 +14,10 @@ export default function Home() {
         document.title = 'Accueil'
     })
     return(
-        <div>
+        <div className="home">
             <Header />
-            
-                <Banner />
-                <Gallery />
-            
+            <Banner />
+            <Gallery />
             <Footer />
         </div>
     )

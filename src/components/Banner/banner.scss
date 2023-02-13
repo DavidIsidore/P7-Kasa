@@ -1,27 +1,74 @@
-@import '../../sass/main.scss';
+/*@import '../../sass/main.scss';
 
-.div{
+.div_banner{
+    //@include flex;
     position: absolute;
     top:171px;
     max-width: 1440px;
     height: 223px;
     margin: auto;
+    //background-color: #000000;
+    //opacity: 0.3;
+    //position: relative;
+    top:223px
 }
 
 .banner{
+    //@include flex;
     width:1440px;
     height: 223px;
     margin: auto;
     position: relative;
-    top:223px;
+    //top:223px;
     border-radius: 25px;
+    background-image: linear-gradient(rgba(0,0,0,0.3),rgba(0,0,0,0.3)), url('../../assets/home_banner.png');
 }
 
 .text{
     position: relative;
-    top:78px;
+    font-weight: 500;
+    top:-140px;
     text-align: center;
     color:white;
     font-size: 48px;
     margin:0;
+}*/
+
+@import '../../sass/main.scss';
+
+.banner{
+    position: relative;
+    @include flex;
+    border-radius: 25px;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url('../../assets/home_banner.svg');
+    background-position: center;
+    background-size: cover;
+    height: 223px;
+    padding: 20px;
+    max-width: 95%;
+    margin: 43px auto;
+    @media screen and (max-width: 550px){
+        margin: 20px auto;
+        height: 120px;
+    }
+    &_about{
+        position: relative;
+        @include flex;
+        border-radius: 25px;
+        height: 223px;
+        max-width: 95%;
+        margin: 43px auto;
+        background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url('../../assets/about_banner.svg');
+        background-position: center;
+        background-size: cover;
+        @media screen and (max-width: 550px){
+            margin: 20px auto;
+            height: 120px;
+        }
+    }
+    p{
+        color: $color-primary;
+        font-size: clamp(20px, 4vw, 48px);
+        font-weight: 500;
+    }
 }

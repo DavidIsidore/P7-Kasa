@@ -2,9 +2,9 @@ import React from "react";
 import Header from "../../components/Header/Header";
 import Footer from "../../components/Footer/Footer";
 import Banner from "../../components/Banner/Banner";
-import arrow_down from '../../assets/arrow_down.svg';
-import arrow_up from '../../assets/arrow_up.svg'
-import { useState, useEffect } from "react";
+//import arrow_down from '../../assets/arrow_down.svg';
+//import arrow_up from '../../assets/arrow_up.svg'
+import { useEffect } from "react";
 import aboutDatas from "../../data/aboutDatas";
 
 import Collapse from "../../components/Collapse/Collapse";
@@ -72,10 +72,10 @@ export default function About() {
         <div>
         <Header />
         <Banner />
-        <div>
+        <div  style={{width:1023, margin:'auto', position:'relative', top:408}}>
             {   aboutDatas.map(data => {
                 return(
-                    <div key={data.id}><Collapse title={data.title} content={data.content}/></div>
+                    <div key={data.id}><Collapse title={data.title} content={data.content} style={{gap:30}} /></div>
                         )
                 })}
                     </div>

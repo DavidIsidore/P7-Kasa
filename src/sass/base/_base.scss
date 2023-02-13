@@ -1,6 +1,8 @@
 * {
     font-family: 'Montserrat',sans-serif;
     font-style: normal;
+    margin:0;
+    box-sizing: border-box;
 }
 
 a{
@@ -15,6 +17,5 @@ li{
 body{
     padding-top: 40px;
     max-width: 1440px;
-    width: 95%;
     margin:auto;
 }

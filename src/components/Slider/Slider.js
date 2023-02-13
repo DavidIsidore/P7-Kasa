@@ -35,7 +35,7 @@ export default function Slider({appart}) {
                         src={ArrowLeft} 
                         alt="show previous slider" 
                         onClick={prevSlide}
-                        style={{width:96, height:120}}
+                        //style={{width:96, height:120}}
                     />
                     <p className='slideCount'>{currentIndex + 1} / {appart.length}</p>
                 </>

@@ -2,28 +2,35 @@
 
 .notFound{
     color: $color-secondary;
+    margin:0;
     &__error{
         @include flex(column, center, center);
         &__title{
             font-weight: 700;
             font-size: 288px;
-            position: relative;
-            top: 277px;
+            //position: relative;
+            //top: 277px;
             margin-top: 0;
+            @media screen and (max-width:768px) {
+                font-size: 96px;
+            }
         }
         &__text{
             font-weight: 500;
             font-size: 36px;
-            position: relative;
-            top: 66px;
+            //position: relative;
+            //top: 66px;
+            @media screen and (maw-width:768px){
+                font-size:18px;
+            }
         }
         &__back{
             display: block;
             text-align: center;
             font-weight: 500;
             font-size: 18px;
-            position: relative;
-            top: 299px;
+            //position: relative;
+            //top: 299px;
         }
     }
 }
