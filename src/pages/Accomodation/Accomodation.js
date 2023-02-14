@@ -47,12 +47,16 @@ export default function Accomodation() {
         <div>
             <Header />
             <Slider appart={appart}  />
-            <div style={{display:'flex', flexDirection:'row', justifyContent:'space-between'}}>
+            <div className="infos" >
                 <div>
                     
-                    <h1>{title} </h1>
-                    <h2>{location}</h2>
-                    <p>{tags}</p>
+                    <h1 className="infos_title" >{title} </h1>
+                    <h2 className="infos_location" >{location}</h2>
+                    {appartement[0].tags.map((tag,index) =>{
+                        return(
+                            <button key={index}>{tag}</button>
+                        )
+                    })}
                 </div>
                 <div>
                     <div style={{display:'flex', flexDirection:'column', justifyContent:'space-between'}}>

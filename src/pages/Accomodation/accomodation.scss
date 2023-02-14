@@ -1,5 +1,19 @@
 @import '../../sass//main.scss';
 
+.infos{
+    position: relative;
+    top:20px;
+    margin-top:80px;
+    @include flex(row,space-between, center);
+    &_title {
+        color: $color-secondary;
+    }
+
+    &_location {
+        color:$color-secondary;
+    }
+}
+
 .starscontener {
     display: flex;
     flex-direction: row;
