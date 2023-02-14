@@ -5,7 +5,18 @@
     @include flex(row, space-between, center);
     max-width: 1440px;
     width: 95%;
-    margin: auto;
+    height: 68px;
+    margin: 0 auto;
     position: absolute;
     top:40px;
+    @media screen and (max-width:600px) {
+        height: 47px;
+    }
+}
+
+img {
+    height: 68px;
+    @media screen and (max-width:600px) {
+        height: 47px;
+    }
 }

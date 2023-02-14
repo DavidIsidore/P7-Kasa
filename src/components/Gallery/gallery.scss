@@ -1,10 +1,18 @@
 @import '../../sass/main.scss';
 
 .gallery{
+    @include flex(row, space-between, center);
+    flex-wrap: wrap;
     position: absolute;
     top: 537px;
     max-width: 1440px;
+    width:95%;
     background-color: #F6F6F6;
     padding:50px;
     border-radius: 25px;
+    margin: 0 auto;
+    @media screen and (max-width: 1230px) {
+        gap:20px;        
+    }
+
 }

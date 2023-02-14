@@ -7,6 +7,9 @@ import { useState, useEffect } from "react";
 import datas from "../../data/data";
 //import Card from "../../components/Card/Card";
 import Slider from "../../components/Slider/Slider";
+import redstar from '../../assets/red_star.svg'
+import greystar from '../../assets/grey_star.svg'
+import './accomodation.scss'
 
 export default function Accomodation() {
     //const location=useLocation()
@@ -35,6 +38,9 @@ export default function Accomodation() {
     const tags = appartement[0].tags
     const name = appartement[0].host.name
     const picture = appartement[0].host.picture
+    const redStarsNumber = appartement[0].rating
+    const greyStarsNumber = 5 - redStarsNumber
+    //console.log(rating)
     
     
     return(
@@ -49,9 +55,17 @@ export default function Accomodation() {
                     <p>{tags}</p>
                 </div>
                 <div>
-                    <div style={{display:'flex', flexDirection:'row', justifyContent:'space-between'}}>
+                    <div style={{display:'flex', flexDirection:'column', justifyContent:'space-between'}}>
                         <h2>{name}</h2>
                         <img style={{width:64, height:64, borderRadius:50}} src={picture} alt="Visage de l'hôte"/>
+                        <div className='stars-contener'>
+                        {Array.from({ length: redStarsNumber }, (_, i) => (
+                            <img key={i} src={redstar} alt="étoiles de notation pleine" className="redstar"/>
+                        ))}
+                        {Array.from({ length: greyStarsNumber }, (_, i) => (
+                            <img key={i} src={greystar} alt="étoiles de notation vide" className="greystar"/>
+                        ))}
+                    </div>
                     </div>
                     
                 </div>
