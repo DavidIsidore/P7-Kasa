@@ -10,6 +10,7 @@ import Slider from "../../components/Slider/Slider";
 import redstar from '../../assets/red_star.svg'
 import greystar from '../../assets/grey_star.svg'
 import './accomodation.scss'
+import Collapse from '../../components/Collapse/Collapse'
 
 export default function Accomodation() {
     //const location=useLocation()
@@ -35,7 +36,7 @@ export default function Accomodation() {
 
     const title= appartement[0].title
     const location = appartement[0].location
-    const tags = appartement[0].tags
+    //const tags = appartement[0].tags
     const name = appartement[0].host.name
     const picture = appartement[0].host.picture
     const redStarsNumber = appartement[0].rating
@@ -80,21 +81,10 @@ export default function Accomodation() {
             </div>
             <div className="rent" style={{display:'flex', flexDirection:'row'}}>
                     <div className="rent_description">
-                        <h2>Description</h2>
-                        {appartement[0].map((description, index) => {
-                            return(
-                                <p key={index}>{description}</p>
-                            )
-                        })}
-
+                        <Collapse title={'Description'} content={description} />
                     </div>
                     <div className="rent_equipments">
-                        <h2>Équipements</h2>
-                        {appartement[0].map((equipments, index) => {
-                            return(
-                                <p key={index}>{equipments}</p>
-                            )
-                        })}
+                    <Collapse title={'Équipements'} content={equipments} />
                     </div>
                 </div>
             <Footer />
