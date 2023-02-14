@@ -3,7 +3,7 @@
 .infos{
     position: relative;
     top:20px;
-    margin-top:80px;
+    margin-top:150px;
     @include flex(row,space-between, center);
     &_title {
         color: $color-secondary;
@@ -12,14 +12,32 @@
     &_location {
         color:$color-secondary;
     }
+    &_host {
+        @include flex(row);
+        
+    }
+    &_rating {
+        display: flex;
+        flex-direction: row;
+    }
 }
 
-.starscontener {
-    display: flex;
-    flex-direction: row;
-}
+
 
 .redstar, .greystar {
     width:30px;
     height: 30px;
+}
+
+button{
+    width: 115px;
+    height: 25px;
+    border-radius: 10px;
+    background-color: $color-secondary;
+    cursor: pointer;
+}
+
+.rent {
+    @include flex(row, space-between, center);
+    margin-top: 25px;
 }

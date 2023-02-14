@@ -40,6 +40,8 @@ export default function Accomodation() {
     const picture = appartement[0].host.picture
     const redStarsNumber = appartement[0].rating
     const greyStarsNumber = 5 - redStarsNumber
+    const description = appartement[0].description
+    const equipments = appartement[0].equipments
     //console.log(rating)
     
     
@@ -58,11 +60,12 @@ export default function Accomodation() {
                         )
                     })}
                 </div>
-                <div>
-                    <div style={{display:'flex', flexDirection:'column', justifyContent:'space-between'}}>
+                <div >
+                    <div className="infos_host" >
                         <h2>{name}</h2>
                         <img style={{width:64, height:64, borderRadius:50}} src={picture} alt="Visage de l'hôte"/>
-                        <div className='stars-contener'>
+                    </div>
+                    <div className='infos_rating'>
                         {Array.from({ length: redStarsNumber }, (_, i) => (
                             <img key={i} src={redstar} alt="étoiles de notation pleine" className="redstar"/>
                         ))}
@@ -70,10 +73,30 @@ export default function Accomodation() {
                             <img key={i} src={greystar} alt="étoiles de notation vide" className="greystar"/>
                         ))}
                     </div>
-                    </div>
+                    
                     
                 </div>
+                
             </div>
+            <div className="rent" style={{display:'flex', flexDirection:'row'}}>
+                    <div className="rent_description">
+                        <h2>Description</h2>
+                        {appartement[0].map((description, index) => {
+                            return(
+                                <p key={index}>{description}</p>
+                            )
+                        })}
+
+                    </div>
+                    <div className="rent_equipments">
+                        <h2>Équipements</h2>
+                        {appartement[0].map((equipments, index) => {
+                            return(
+                                <p key={index}>{equipments}</p>
+                            )
+                        })}
+                    </div>
+                </div>
             <Footer />
         </div>
     )
