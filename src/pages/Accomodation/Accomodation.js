@@ -11,6 +11,7 @@ import redstar from '../../assets/red_star.svg'
 import greystar from '../../assets/grey_star.svg'
 import './accomodation.scss'
 import Collapse from '../../components/Collapse/Collapse'
+import '../Accomodation/accomodation.scss'
 
 export default function Accomodation() {
     //const location=useLocation()
@@ -51,10 +52,10 @@ export default function Accomodation() {
             <Header />
             <Slider appart={appart}  />
             <div className="infos" >
-                <div>
+                <div className="infos_bloc">
                     
-                    <h1 className="infos_title" >{title} </h1>
-                    <h2 className="infos_location" >{location}</h2>
+                    <h1 className="infos_bloc_title" >{title} </h1>
+                    <h2 className="infos_bloc_location" >{location}</h2>
                     {appartement[0].tags.map((tag,index) =>{
                         return(
                             <button key={index}>{tag}</button>
@@ -79,9 +80,9 @@ export default function Accomodation() {
                 </div>
                 
             </div>
-            <div className="rent" style={{display:'flex', flexDirection:'row'}}>
+            <div className="rent">
                     <div className="rent_description">
-                        <Collapse title={'Description'} content={description} />
+                        <Collapse  title={'Description'} content={description} />
                     </div>
                     <div className="rent_equipments">
                     <Collapse title={'Équipements'} content={equipments} />

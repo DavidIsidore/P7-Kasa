@@ -1,17 +1,23 @@
 @import '../../sass//main.scss';
 
 .infos{
-    position: relative;
+    //position: relative;
+    width: 1240px;
+    height: 643px;
     top:20px;
-    margin-top:150px;
+    //margin-top:150px;
     @include flex(row,space-between, center);
-    &_title {
-        color: $color-secondary;
+    &_bloc{
+        margin-top: 0;
+        &_title {
+            color: $color-secondary;
+        }
+    
+        &_location {
+            color:$color-secondary;
+        }
     }
-
-    &_location {
-        color:$color-secondary;
-    }
+    
     &_host {
         @include flex(row);
         
@@ -39,5 +45,17 @@ button{
 
 .rent {
     @include flex(row, space-between, center);
-    margin-top: 25px;
+    margin-top: 0;
+    width: 1240px;
+    gap:36px;
+    
+    &_description, &_equipments {
+        @include flex(column, center, center);
+        flex-wrap: wrap;
+        width: 50%;
+        height: 52px;
+        align-items: center;
+        
+    }
+    
 }

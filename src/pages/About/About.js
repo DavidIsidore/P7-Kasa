@@ -72,10 +72,10 @@ export default function About() {
         <div>
         <Header />
         <Banner />
-        <div  style={{width:1023, margin:'auto', position:'relative', top:408}}>
+        <div className="about" style={{width:1023, margin:'auto', position:'relative', top:408}}>
             {   aboutDatas.map(data => {
                 return(
-                    <div key={data.id}><Collapse title={data.title} content={data.content} style={{gap:30}} /></div>
+                    <div className="about_collapse" key={data.id}><Collapse title={data.title} content={data.content} style={{gap:30}} /></div>
                         )
                 })}
                     </div>
