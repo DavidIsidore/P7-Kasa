@@ -51,20 +51,20 @@ export default function Accomodation() {
         <div>
             <Header />
             <Slider appart={appart}  />
-            <div className="infos" >
-                <div className="infos_bloc">
+            <div className="accomodation" >
+                <div className="accomodation_bloc">
                     
-                    <h1 className="infos_bloc_title" >{title} </h1>
-                    <h2 className="infos_bloc_location" >{location}</h2>
+                    <h1 className="accomodation_bloc_title" >{title} </h1>
+                    <h2 className="accomodation_bloc_location" >{location}</h2>
                     {appartement[0].tags.map((tag,index) =>{
                         return(
                             <button key={index}>{tag}</button>
                         )
                     })}
                 </div>
-                <div >
-                    <div className="infos_host" >
-                        <h2>{name}</h2>
+                <div className="infos_host" >
+                    <div >
+                        <h2 className="infos_host_name" >{name}</h2>
                         <img style={{width:64, height:64, borderRadius:50}} src={picture} alt="Visage de l'hôte"/>
                     </div>
                     <div className='infos_rating'>
