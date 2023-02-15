@@ -30,3 +30,14 @@
         }
     }
 }
+
+.accomodation_collapse{
+    display: flex;
+    justify-content: space-between;
+    gap:50px;
+    width: 95%;
+    margin: 0 auto;
+    &_item{
+        width: 50%;
+    }
+}

@@ -14,8 +14,7 @@ import Collapse from '../../components/Collapse/Collapse'
 import '../Accomodation/accomodation.scss'
 
 export default function Accomodation() {
-    //const location=useLocation()
-    //console.log(location)
+    
     const params= useParams('id').id
 
     useEffect(() => {
@@ -23,8 +22,7 @@ export default function Accomodation() {
     })
 
     
-    //console.log(params)
-
+    
     const [appart, showAppart] = useState([])
     const appartement = datas.filter(data => data.id===params)
 
@@ -33,7 +31,7 @@ export default function Accomodation() {
        showAppart(appartement[0].pictures)
     }, [params])
 
-    //console.log(appart)
+   
 
     const title= appartement[0].title
     const location = appartement[0].location
@@ -44,39 +42,39 @@ export default function Accomodation() {
     const greyStarsNumber = 5 - redStarsNumber
     const description = appartement[0].description
     const equipments = appartement[0].equipments
-    //console.log(rating)
     
     
-    return(
+    /*return(
         <div>
             <Header />
             <Slider appart={appart}  />
             <div className="accomodation" >
                 <div className="accomodation_bloc">
-                    
-                    <h1 className="accomodation_bloc_title" >{title} </h1>
-                    <h2 className="accomodation_bloc_location" >{location}</h2>
-                    {appartement[0].tags.map((tag,index) =>{
-                        return(
-                            <button key={index}>{tag}</button>
-                        )
-                    })}
-                </div>
-                <div className="infos_host" >
-                    <div >
-                        <h2 className="infos_host_name" >{name}</h2>
-                        <img style={{width:64, height:64, borderRadius:50}} src={picture} alt="Visage de l'hôte"/>
+                    <div className="accomodation_bloc_infos" >
+                        <h1  >{title} </h1>
+                        <h2  >{location}</h2>
+                        <div>{appartement[0].tags.map((tag,index) =>{
+                            return(
+                             <button key={index}>{tag}</button>
+                         )
+                         })}
+                         </div>
                     </div>
-                    <div className='infos_rating'>
-                        {Array.from({ length: redStarsNumber }, (_, i) => (
-                            <img key={i} src={redstar} alt="étoiles de notation pleine" className="redstar"/>
-                        ))}
-                        {Array.from({ length: greyStarsNumber }, (_, i) => (
-                            <img key={i} src={greystar} alt="étoiles de notation vide" className="greystar"/>
-                        ))}
+                    <div className="accomodation_bloc_host" >
+                       <div >
+                           <h2 className="accomodation_bloc_host_name" >{name}</h2>
+                           <img style={{width:64, height:64, borderRadius:50}} src={picture} alt="Visage de l'hôte"/>
+                       </div>
+                       <div className="accomodation_bloc_host_rating">
+                           {Array.from({ length: redStarsNumber }, (_, i) => (
+                               <img key={i} src={redstar} alt="étoiles de notation pleine" className="redstar"/>
+                           ))}
+                           {Array.from({ length: greyStarsNumber }, (_, i) => (
+                               <img key={i} src={greystar} alt="étoiles de notation vide" className="greystar"/>
+                           ))}
+                        </div>
+                    
                     </div>
-                    
-                    
                 </div>
                 
             </div>
@@ -90,5 +88,57 @@ export default function Accomodation() {
                 </div>
             <Footer />
         </div>
+    )*/
+
+    return(
+        <>
+            <Header />
+            <Slider appart={appart} />
+            <div className="accomodation">
+                <div className="accomodation_bloc">
+                    <div className="accomodation_bloc_infos">
+                        <h1>{appartement[0].title}</h1>
+                        <p>{appartement[0].location}</p>
+                        <div>
+                            {appartement[0].tags.map((tag,index) => {
+                                return(
+                                    <button key={index}>{tag}</button>
+                                )
+                            })}
+                        </div>
+                    </div>
+                        <div className="accomodation_bloc_host">
+                            <div>
+                                <h2 className="accomodation_bloc_host_name" >{name}</h2>
+                                <img style={{width:64, height:64, borderRadius:50}} src={picture} alt="Visage de l'hôte"/>
+                            </div>
+                            <div className="accomodation_bloc_host_rating">
+                                {Array.from({ length: redStarsNumber }, (_, i) => (
+                               <img key={i} src={redstar} alt="étoiles de notation rouge" className="redstar"/>
+                                ))}
+                                {Array.from({ length: greyStarsNumber }, (_, i) => (
+                               <img key={i} src={greystar} alt="étoiles de notation grise" className="greystar"/>
+                                ))}
+                            </div>
+                            
+                        </div>
+
+                    
+
+                </div>
+                <div className="accomodation_collapse">
+                    <div className="accomodation_coolapse_item">
+                        <Collapse title={'Description'} content={description} />
+
+                    </div>
+                    <div className="accomodation_collapse_item">
+                        <Collapse title={'Équipements'} content={equipments} />
+                    </div>
+
+                </div>
+                
+            </div>
+            <Footer />
+        </>
     )
 }

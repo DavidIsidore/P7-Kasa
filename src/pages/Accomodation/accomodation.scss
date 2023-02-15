@@ -1,31 +1,31 @@
 @import '../../sass//main.scss';
 
-.accomodation{
-    //position: relative;
-    width: 1240px;
-    height: 643px;
-    top:20px;
-    //margin-top:150px;
-    @include flex(row,space-between, center);
-    &_bloc{
-        margin-top: 0;
-        &_title {
-            color: $color-secondary;
+/*.accomodation{
+   &_bloc{
+    @include flex(row, space-between,flex-start);
+    color: $color-secondary;
+    margin: 0 auto;
+    width:95%;
+    &_infos{
+        display:flex;
+        flex-direction: column;
+        font-weight: 500;
+        font-size: 14px;
+        button{
+            width: 115px;
+            height: 25px;
+            border-radius: 10px;
+            background-color: $color-secondary;
+            cursor: pointer;
         }
-    
-        &_location {
-            color:$color-secondary;
+        div{
+            display: flex;
+            flex-wrap: wrap;
+            gap:10px;
         }
     }
-    
-    &_host {
-        @include flex(row);
-        
-    }
-    &_rating {
-        display: flex;
-        flex-direction: row;
-    }
+   } 
+   
 }
 
 
@@ -35,13 +35,7 @@
     height: 30px;
 }
 
-button{
-    width: 115px;
-    height: 25px;
-    border-radius: 10px;
-    background-color: $color-secondary;
-    cursor: pointer;
-}
+
 
 .rent {
     @include flex(row, space-between, center);
@@ -58,4 +52,53 @@ button{
         
     }
     
+}*/
+
+.accomodation{
+    &_bloc{
+        @include flex(row, space-between, flex-start);
+        color: $color-secondary;
+        margin: 0 auto;
+        width: 95%;
+        &_infos{
+            display:flex;
+            flex-direction: column;
+            font-weight: 500;
+            width: 1230px;
+            font-size: 18px;
+            button{
+                display: inline;
+                padding: 5px;
+                margin-right: 5px;
+                cursor: pointer;
+                border-radius: 10px;
+                border: none;
+                color: $color-primary;
+                background-color: $color-secondary;
+            }
+            div {
+                display: flex;
+                flex-wrap: wrap;
+            }
+        }
+        &_host{
+            display: flex;
+            flex-direction: column;
+            gap:10px;
+            div{
+                display: flex;
+                justify-content: flex-end;
+            }
+            &_name{
+                flex-direction: column;
+                align-self: center;
+            }
+            &_rating{
+                .redstar, .greystar{
+                    width:30px;
+                    height: 30px;
+                }
+            }
+        }
+    }
 }
