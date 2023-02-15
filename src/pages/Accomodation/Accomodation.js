@@ -36,7 +36,8 @@ export default function Accomodation() {
     const title= appartement[0].title
     const location = appartement[0].location
     //const tags = appartement[0].tags
-    const name = appartement[0].host.name
+    const name = appartement[0].host.name.split(' ')
+    
     const picture = appartement[0].host.picture
     const redStarsNumber = appartement[0].rating
     const greyStarsNumber = 5 - redStarsNumber
@@ -97,8 +98,8 @@ export default function Accomodation() {
             <div className="accomodation">
                 <div className="accomodation_bloc">
                     <div className="accomodation_bloc_infos">
-                        <h1>{appartement[0].title}</h1>
-                        <p>{appartement[0].location}</p>
+                        <h1>{title}</h1>
+                        <p>{location}</p>
                         <div>
                             {appartement[0].tags.map((tag,index) => {
                                 return(
@@ -109,7 +110,10 @@ export default function Accomodation() {
                     </div>
                         <div className="accomodation_bloc_host">
                             <div>
-                                <h2 className="accomodation_bloc_host_name" >{name}</h2>
+                                <h2 className="accomodation_bloc_host_name" >
+                                <span>{name[0]}</span>
+                                <span>{name[1]}</span>
+                                </h2>
                                 <img style={{width:64, height:64, borderRadius:50}} src={picture} alt="Visage de l'hôte"/>
                             </div>
                             <div className="accomodation_bloc_host_rating">
