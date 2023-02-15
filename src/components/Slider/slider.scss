@@ -10,7 +10,8 @@
     background-position: center;
     background-size: cover;
     width: 95%;
-    margin: 43px auto;
+    margin: 128px auto;
+    margin-top: 20px;
     @media screen and (max-width: 650px){
         height: 200px;  
         margin: 20px auto;   
@@ -22,14 +23,12 @@
         width: 47px;
         transform: translateY(-50%);
         cursor: pointer;
-        /*&:active{
-            transform: translateY(-50%) scale(0.9);
-        }*/
+        
         &_right{
-            right: 75px;
+            right: 24px;
         }
         &_left{
-            left: 75px;
+            left: 24px;
         }
     }
     .slideCount{
