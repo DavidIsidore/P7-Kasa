@@ -8,6 +8,8 @@ import { useEffect } from "react";
 import aboutDatas from "../../data/aboutDatas";
 
 import Collapse from "../../components/Collapse/Collapse";
+import './about.scss'
+
 export default function About() {
 
     useEffect(() => {
@@ -72,7 +74,7 @@ export default function About() {
         <div>
         <Header />
         <Banner />
-        <div className="about" style={{width:1023, margin:'auto', position:'relative', top:408}}>
+        <div className="about" >
             {   aboutDatas.map(data => {
                 return(
                     <div className="about_collapse" key={data.id}><Collapse title={data.title} content={data.content} style={{gap:30}} /></div>

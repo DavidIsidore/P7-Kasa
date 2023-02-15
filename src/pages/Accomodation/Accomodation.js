@@ -131,7 +131,7 @@ export default function Accomodation() {
 
                 </div>
                 <div className="accomodation_collapse">
-                    <div className="accomodation_coolapse_item">
+                    <div className="accomodation_collapse_item">
                         <Collapse title={'Description'} content={description} />
 
                     </div>

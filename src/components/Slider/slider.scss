@@ -10,7 +10,9 @@
     background-position: center;
     background-size: cover;
     width: 95%;
-    margin: 128px auto;
+    //margin: 128px auto;
+    margin: auto;
+    margin-bottom: 30px;
     margin-top: 20px;
     @media screen and (max-width: 650px){
         height: 200px;  
