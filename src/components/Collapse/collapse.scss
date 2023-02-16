@@ -10,7 +10,7 @@
         color: #fff;
         border-radius: 10px;
         font-weight: 500;
-        font-size: 18px;
+        font-size: clamp(13px, 4vw,18px);
         cursor: pointer;
         width: 100%;
         height: 52px;
