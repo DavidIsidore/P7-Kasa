@@ -3,10 +3,10 @@
 .gallery{
     @include flex(row, space-between, center);
     flex-wrap: wrap;
-    position: absolute;
-    top: 537px;
+    
     max-width: 1440px;
     width:95%;
+    gap:50px;
     background-color: #F6F6F6;
     padding:50px;
     border-radius: 25px;

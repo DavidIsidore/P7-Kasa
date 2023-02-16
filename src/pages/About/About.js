@@ -17,7 +17,7 @@ export default function About() {
     })
 
     //const [isOpen, setIsOpen] = useState(false)
-    console.log(aboutDatas)
+   
 
     /*useEffect((setIsOpen) => {
         return () => setIsOpen(false)
@@ -77,7 +77,7 @@ export default function About() {
         <div className="about" >
             {   aboutDatas.map(data => {
                 return(
-                    <div className="about_collapse" key={data.id}><Collapse title={data.title} content={data.content} style={{gap:30}} /></div>
+                    <div className="about_collapse" key={data.id}><Collapse className="about_collapse_self" title={data.title} content={data.content}  /></div>
                         )
                 })}
                     </div>

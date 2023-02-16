@@ -1,10 +1,16 @@
 @import '../../sass/main.scss';
 
 .about {
-    width:1023px;
+    width:95%;
     margin: 0 auto;
     &_collapse{
-        margin: 30px auto;
-        width:1023px;
+        margin: auto;
+        margin-top: 0px;
+        margin-bottom: 31px;
+        width:95%;
     }
+}
+
+.collapse_content {
+    padding: 27px 27px 19px 18px;
 }

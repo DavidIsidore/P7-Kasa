@@ -15,8 +15,8 @@ export default function Home() {
     })
     return(
         <div className="home">
-            <Header />
-            <Banner />
+            <Header className="header" />
+            <Banner  className="banner" />
             <Gallery />
             <Footer />
         </div>

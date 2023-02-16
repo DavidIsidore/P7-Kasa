@@ -114,7 +114,7 @@ export default function Accomodation() {
                                 <span>{name[0]}</span>
                                 <span>{name[1]}</span>
                                 </h2>
-                                <img style={{width:64, height:64, borderRadius:50}} src={picture} alt="Visage de l'hôte"/>
+                                <img  className="accomodation_bloc_host_picture" src={picture} alt="Visage de l'hôte"/>
                             </div>
                             <div className="accomodation_bloc_host_rating">
                                 {Array.from({ length: redStarsNumber }, (_, i) => (

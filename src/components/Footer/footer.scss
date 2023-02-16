@@ -4,16 +4,23 @@
     @include flex(column, center,center);
     background-color: black;
     height: 209px;
-    width: 1440px;
+    width: 100%;
     gap:50px;
+    @media screen and (max-width:650px)  {
+        gap:20px;
+    }
     
     margin-bottom:40px;
     
-    &__img{
+    &_img{
         width: 122px;
         height: 39px;
     }
-    &__text{
-        color:white;
+    &_text{
+        color:$color-primary;
+        font-size: 24px;
+        @media screen  and (max-width:650px) {
+            font-size: 12px;
+        }
     }
 }
