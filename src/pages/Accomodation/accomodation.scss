@@ -80,7 +80,7 @@
             }
             button{
                 display: inline;
-                padding: 5px;
+                //padding: 5px;
                 margin-right: 5px;
                 margin-top: 20px;
                 cursor: pointer;
@@ -89,6 +89,13 @@
                 color: $color-primary;
                 font-size: clamp(10px, 3vw,14px);
                 background-color: $color-secondary;
+                width: 115px;
+                height: 25px;
+                @media screen and (max-width:500px)  {
+                    width:84px;
+                    height: 18px;
+                    line-height: 14px;
+                }
             }
             div {
                 display: flex;
