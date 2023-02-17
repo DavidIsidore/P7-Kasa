@@ -2,6 +2,7 @@
 
 .banner{
     position: relative;
+   max-width: 95%;
     
     @include flex;
     border-radius: 25px;
@@ -33,7 +34,7 @@
     }
     p{
         color: $color-primary;
-        font-size: clamp(20px, 4vw, 48px);
+        font-size: clamp(24px, 4vw, 48px);
         font-weight: 500;
     }
 }

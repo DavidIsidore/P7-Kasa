@@ -6,7 +6,7 @@ import './gallery.scss'
 export default function Galley() {
     return(
         <div className="gallery">
-            <ul style={{display:"flex",flexWrap:'wrap',gap:60}}>
+            
                 {datas.map(data => {
                     return(
                         <Card
@@ -17,7 +17,7 @@ export default function Galley() {
                         />
                     )
                 })}
-            </ul>
+            
         </div>
     )
 }

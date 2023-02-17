@@ -5,9 +5,19 @@
     color: $color-secondary;
     gap:20px;
     &_item{
+        font-size: 24px;
+        @media screen and (max-width:600px)  {
+            font-size: 12px;
+            text-transform: uppercase;
+        }
         
         &_active{
             text-decoration: underline solid $color-secondary;
+            font-size: 24px;
+        @media screen and (max-width:600px)  {
+            font-size: 12px;
+            text-transform: uppercase;
+        }
             
         }
         &_active:hover{
