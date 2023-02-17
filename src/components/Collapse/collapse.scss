@@ -1,59 +1,57 @@
 @import '../../sass/main.scss';
 
 .collapse {
-    @include flex(column, space-between, center);
-    
-    align-items: center;
-    &_title{
-        @include flex(row, space-between,center);
-        background-color: $color-secondary;
-        color: #fff;
-        border-radius: 10px;
-        font-weight: 500;
-        font-size: clamp(13px, 4vw,18px);
-        cursor: pointer;
-        width: 100%;
-        height: 52px;
-        padding-left: 10px;
-        padding-right: 10px;
-    }
+  @include flex(column, space-between, center);
 
-    &_content{
-        display:flex;
-        flex-direction: column;
-        font-size: clamp(12px,4vw,24px);
-        font-weight: 400;
-        gap:5px;
-        text-align: left;
-        visibility: visible;
-        padding-left: 20px;
-        padding-right: 12px;
-        width: 100%;
-        color: $color-secondary;
-        &_hidden{
-            visibility: hidden;
-            height: 0px;
-        }
-        
-    }
-    img {
-        width: 16px;
-        height: 26px;
-        cursor:pointer;
-        transform: translateY(-15%);
-        padding-top: 13px;
-    }
-}
+  align-items: center;
+  &_title {
+    @include flex(row, space-between, center);
+    background-color: $color-secondary;
+    color: #fff;
+    border-radius: 10px;
+    font-weight: 500;
+    font-size: clamp(13px, 4vw, 18px);
+    cursor: pointer;
+    width: 100%;
+    height: 52px;
+    padding-left: 10px;
+    padding-right: 10px;
+  }
 
-.accomodation_collapse{
+  &_content {
     display: flex;
-    justify-content: space-between;
-    gap:50px;
-    width: 95%;
-    margin: 24px auto;
-    &_item{
-        width: 100%;
-        max-width: 582px;
+    flex-direction: column;
+    font-size: clamp(12px, 4vw, 24px);
+    font-weight: 400;
+    gap: 5px;
+    text-align: left;
+    visibility: visible;
+    padding-left: 20px;
+    padding-right: 12px;
+    width: 100%;
+    color: $color-secondary;
+    &_hidden {
+      visibility: hidden;
+      height: 0px;
     }
+  }
+  img {
+    width: 16px;
+    height: 26px;
+    cursor: pointer;
+    transform: translateY(-15%);
+    padding-top: 13px;
+  }
 }
 
+.accomodation_collapse {
+  display: flex;
+  justify-content: space-between;
+  gap: 50px;
+  width: 95%;
+  margin: 24px auto;
+  &_item {
+    width: 100%;
+    max-width: 582px;
+  }
+}

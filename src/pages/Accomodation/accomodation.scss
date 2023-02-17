@@ -1,98 +1,44 @@
 @import '../../sass//main.scss';
 
-/*.accomodation{
-   &_bloc{
-    @include flex(row, space-between,flex-start);
-    color: $color-secondary;
-    margin: 0 auto;
-    width:95%;
-    &_infos{
-        display:flex;
-        flex-direction: column;
-        font-weight: 500;
-        font-size: 14px;
-        button{
-            width: 115px;
-            height: 25px;
-            border-radius: 10px;
-            background-color: $color-secondary;
-            cursor: pointer;
-        }
-        div{
-            display: flex;
-            flex-wrap: wrap;
-            gap:10px;
-        }
-    }
-   } 
-   
-}
-
-
-
-.redstar, .greystar {
-    width:30px;
-    height: 30px;
-}
-
-
-
-.rent {
-    @include flex(row, space-between, center);
-    margin-top: 0;
-    width: 1240px;
-    gap:36px;
-    
-    &_description, &_equipments {
-        @include flex(column, center, center);
-        flex-wrap: wrap;
-        width: 50%;
-        height: 52px;
-        align-items: center;
-        
-    }
-    
-}*/
-
-.accomodation{
-    &_bloc{
+.accomodation {
+    &_bloc {
         @include flex(row, space-between, flex-start);
         color: $color-secondary;
         margin: 0 auto;
         width: 95%;
-        @media screen and (max-width:768px) {
+        @media screen and (max-width: 768px) {
             @include flex(column, space-between, flex-start);
-            gap:10px;
+            gap: 10px;
         }
-        &_infos{
-            display:flex;
+        &_infos {
+            display: flex;
             flex-direction: column;
             font-weight: 500;
-            //width: 1230px;
+
             font-size: 18px;
-            h1{
-                font-size: clamp(18px,5vw,36px);
+            h1 {
+                font-size: clamp(18px, 5vw, 36px);
                 font-weight: 500;
             }
-            p{
-                font-size: clamp(14px, 4vw,18px);
+            p {
+                font-size: clamp(14px, 4vw, 18px);
                 font-weight: 500;
             }
-            button{
+            button {
                 display: inline;
-                //padding: 5px;
+
                 margin-right: 5px;
                 margin-top: 20px;
                 cursor: pointer;
                 border-radius: 10px;
                 border: none;
                 color: $color-primary;
-                font-size: clamp(10px, 3vw,14px);
+                font-size: clamp(10px, 3vw, 14px);
                 background-color: $color-secondary;
                 width: 115px;
                 height: 25px;
-                @media screen and (max-width:500px)  {
-                    width:84px;
+                @media screen and (max-width: 500px) {
+                    width: 84px;
                     height: 18px;
                     line-height: 14px;
                 }
@@ -100,49 +46,48 @@
             div {
                 display: flex;
                 flex-wrap: wrap;
-                gap:10px;
+                gap: 10px;
             }
         }
-        &_host{
+        &_host {
             display: flex;
             flex-direction: column;
-            gap:10px;
-            @media screen and (max-width:768px) {
+            gap: 10px;
+            @media screen and (max-width: 768px) {
                 width: 100%;
-                @include flex(row-reverse,space-between, center);
+                @include flex(row-reverse, space-between, center);
             }
-            div{
+            div {
                 display: flex;
                 justify-content: flex-end;
             }
-            &_name{
-                display:flex;
+            &_name {
+                display: flex;
                 flex-direction: column;
                 align-self: center;
-                font-size: clamp(12px, 3vw,18px);
+                font-size: clamp(12px, 3vw, 18px);
                 font-weight: 500;
-                gap:10px;
+                gap: 10px;
                 margin-right: 10px;
                 text-align: right;
-               
-                
             }
 
-            &_picture{
-                width:64px;
+            &_picture {
+                width: 64px;
                 height: 64px;
-                 border-radius: 50%;
-                @media screen  and  (max-width:500px) {
+                border-radius: 50%;
+                @media screen and (max-width: 500px) {
                     width: 32px;
                     height: 32px;
                 }
             }
-            &_rating{
-                .redstar, .greystar{
-                    width:30px;
+            &_rating {
+                .redstar,
+                .greystar {
+                    width: 30px;
                     height: 30px;
-                    @media screen  and (max-width:500px) {
-                        width:15px;
+                    @media screen and (max-width: 500px) {
+                        width: 15px;
                         height: 15px;
                     }
                 }
