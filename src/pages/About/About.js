@@ -2,8 +2,6 @@ import React from 'react'
 import Header from '../../components/Header/Header'
 import Footer from '../../components/Footer/Footer'
 import Banner from '../../components/Banner/Banner'
-//import arrow_down from '../../assets/arrow_down.svg';
-//import arrow_up from '../../assets/arrow_up.svg'
 import { useEffect } from 'react'
 import aboutDatas from '../../data/aboutDatas'
 
@@ -21,8 +19,11 @@ export default function About() {
             <Banner />
             <div className="about">
                 {aboutDatas.map((data) => {
+                    // on parcourt le tableau
                     return (
                         <div className="about_collapse" key={data.id}>
+                            {' '}
+                            {/*pour afficher le titre et le contenu selon la key correspondant à l'id de l'objet */}
                             <Collapse
                                 className="about_collapse_self"
                                 title={data.title}

@@ -7,6 +7,7 @@ import { useEffect } from 'react'
 import './home.scss'
 
 export default function Home() {
+    // on affiche "Accueil" comme titre de la page
     useEffect(() => {
         document.title = 'Accueil'
     })
