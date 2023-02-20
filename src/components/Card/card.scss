@@ -1,44 +1,48 @@
 @import '../../sass/main.scss';
 
 .singleCard {
-  width: 340px;
-  height: 340px;
-  border-radius: 10px;
-  cursor: pointer;
-
-  @media screen and (maw-width: 1230px) {
-    width: 100%;
-  }
-
-  @media screen and (max-width: 880px) {
     width: 340px;
-    margin: 0 auto;
-  }
+    height: 340px;
+    border-radius: 10px;
+    cursor: pointer;
+    position: relative;
 
-  @media screen and (max-width: 500px) {
-    width: 335px;
-    height: 255px;
-    margin: 0 auto;
-  }
-  &::after {
-    background: linear-gradient(
-      180deg,
-      rgba(255, 255, 255, 0) 0%,
-      rgba(0, 0, 0, 0.5) 100%
-    );
-  }
+    @media screen and (maw-width: 1230px) {
+        width: 100%;
+    }
+
+    @media screen and (max-width: 880px) {
+        width: 340px;
+        margin: 0 auto;
+    }
+
+    @media screen and (max-width: 500px) {
+        width: 335px;
+        height: 255px;
+        margin: 0 auto;
+    }
+    &::after {
+        background: linear-gradient(
+            180deg,
+            rgba(255, 255, 255, 0) 0%,
+            rgba(0, 0, 0, 0.5) 100%
+        );
+    }
 }
 
 img {
-  object-fit: cover;
-  width: 100%;
-  height: 100%;
-  border-radius: 10px;
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
 }
 
 h3 {
-  color: $color-secondary;
-
-  font-weight: 500;
-  font-size: 18px;
+    color: $color-primary;
+    position: absolute;
+    bottom: 6%;
+    left: 6%;
+    right: 6%;
+    font-weight: 500;
+    font-size: 18px;
 }
